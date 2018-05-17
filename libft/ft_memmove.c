@@ -12,6 +12,21 @@
 
 #include "ft_header.h"
 
-void	*memmove(void *str1, const void *str2, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
+	size_t i;
+	char *s;
+	char *d;
 
+	s = src;
+	d = dest;
+	i = 0;
+	while (i < n)
+	{
+		d = s;
+		d++;
+		s++;
+		i++;
+	}
+	return (dest);
+}
