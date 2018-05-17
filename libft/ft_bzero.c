@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwatkyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/17 10:50:29 by jwatkyn           #+#    #+#             */
-/*   Updated: 2018/05/17 10:50:32 by jwatkyn          ###   ########.fr       */
+/*   Created: 2018/05/17 12:26:18 by jwatkyn           #+#    #+#             */
+/*   Updated: 2018/05/17 12:30:56 by jwatkyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_header.h"
 
-int	ft_strcmp(const char *str1, const char *str2)
+void	ft_bzero(void *s, size_t n)
 {
-	while (*str1 && *str2)
+	void *d;
+
+	d = s;
+	while (n)
 	{
-		if (*str1 != *str2)
-			break ;
-		str1++;
-		str2++;
+		d = 0;
+		n--;
+		d++;
 	}
-	return ((int)(*str1 - *str2));
 }

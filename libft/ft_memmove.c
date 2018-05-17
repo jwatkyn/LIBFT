@@ -1,25 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwatkyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/17 10:50:29 by jwatkyn           #+#    #+#             */
-/*   Updated: 2018/05/17 10:50:32 by jwatkyn          ###   ########.fr       */
+/*   Created: 2018/05/17 15:11:28 by jwatkyn           #+#    #+#             */
+/*   Updated: 2018/05/17 17:01:35 by jwatkyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_header.h"
 
-int	ft_strcmp(const char *str1, const char *str2)
+void	*memmove(void *str1, const void *str2, size_t n)
 {
-	while (*str1 && *str2)
-	{
-		if (*str1 != *str2)
-			break ;
-		str1++;
-		str2++;
-	}
-	return ((int)(*str1 - *str2));
-}
+

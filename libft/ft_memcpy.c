@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwatkyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/17 10:50:29 by jwatkyn           #+#    #+#             */
-/*   Updated: 2018/05/17 10:50:32 by jwatkyn          ###   ########.fr       */
+/*   Created: 2018/05/17 12:31:16 by jwatkyn           #+#    #+#             */
+/*   Updated: 2018/05/17 14:24:05 by jwatkyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_header.h"
 
-int	ft_strcmp(const char *str1, const char *str2)
+void	*ft_memcpy(void *str1, const void * str2, size_t n)
 {
-	while (*str1 && *str2)
+	char	*s1;
+	char	*s2;
+	size_t	i;
+
+	s1 = str1;
+	s2 = str2;
+	while (i < n)
 	{
-		if (*str1 != *str2)
-			break ;
-		str1++;
-		str2++;
+		s1 = s2;
+		s1++;
+		s2++;
 	}
-	return ((int)(*str1 - *str2));
+	return (s1);
 }
