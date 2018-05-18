@@ -1,32 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmap.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwatkyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/18 07:48:18 by jwatkyn           #+#    #+#             */
-/*   Updated: 2018/05/18 07:48:19 by jwatkyn          ###   ########.fr       */
+/*   Created: 2018/05/18 11:39:12 by jwatkyn           #+#    #+#             */
+/*   Updated: 2018/05/18 14:04:15 by jwatkyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_header.h"
+#include "libft.h"
 
-char	*ft_strmap(char const *s, char (*f)(char))
+char	*ft_strtrim(char const *s)
 {
-	char *str;
-	size_t i;
+	size_t	i;
+	size_t	min;
+	size_t	max;
+	char	*str;
+	size_t	len;
 
 	if (!s)
 		return (NULL);
-	str = ft_strnew(ft_strlen(s));
-	if (!str)
-		return (NULL);
 	i = 0;
-	while (s[i])
+	while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n' || s)
 	{
-		str[i] = f(s[i]);
 		i++;
+		s1++;
 	}
-	return (str);
-}
+	min = i;
+	if (i == ft_strlen(s))
+		return (NULL);
+	i = ft_strlen(s);
+	while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n')
+	{
+		i--;
+	}
+	max = i;
+	len = max - min;
+	str = ft_strnew(str, len);
+
