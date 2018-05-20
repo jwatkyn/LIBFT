@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_header.h"
+#include "libft.h"
 
 char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
@@ -24,6 +24,6 @@ char	*ft_strncpy(char *dst, const char *src, size_t len)
 		src++;
 		i++;
 	}
-	*dst == '\0';
+	*dst = '\0';
 	return (dst);
 }

@@ -10,11 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_header.h"
+#include "libft.h"
 
 char	*ft_strcpy(char *dst, const char *src)
 {
-	if (src = NULL)
+	if (!(src))
 		return (NULL);
 	while (*src)
 	{

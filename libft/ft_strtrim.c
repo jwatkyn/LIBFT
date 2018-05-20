@@ -14,7 +14,6 @@
 
 char	*ft_strtrim(char const *s)
 {
-	size_t	i;
 	size_t	min;
 	size_t	max;
 	char	*str;
@@ -22,21 +21,26 @@ char	*ft_strtrim(char const *s)
 
 	if (!s)
 		return (NULL);
-	i = 0;
-	while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n' || s)
+	min = 0;
+	max = ft_strlen(s) - 1;
+	while (ft_iswhitespace(s[min]) && min < max)
 	{
-		i++;
-		s1++;
+		min++;
 	}
-	min = i;
-	if (i == ft_strlen(s))
-		return (NULL);
-	i = ft_strlen(s);
-	while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n')
+	while (ft_iswhitespace(s[max]) && max > min)
 	{
-		i--;
+		max--;
 	}
-	max = i;
 	len = max - min;
-	str = ft_strnew(str, len);
-
+	if (max <= min)
+		str = ft_strnew(sizeof(char));
+	else
+		str = ft_strnew(sizeof(char) * (len + 2));
+	if (str == NULL)
+		return (NULL);
+	if (max > min)
+		str = ft_strncpy(str, s + min, len);
+	else
+		str[0] = '\0';
+	return (str);
+}

@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_header.h"
+#include "libft.h"
 
-char	*strcat(char *dest, const char *char)
+char	*strcat(char *dest, const char *src)
 {
 	char *d;
 

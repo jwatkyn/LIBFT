@@ -10,24 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_header.h"
+#include "libft.h"
 
 char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	size_t i;
 	char *str;
 
-	i = 0;
-	if (len == 0)
+	str = ft_strnew(sizeof(char) * (len + 1));
+	if (str == NULL || s == NULL)
 		return (NULL);
-	str = ft_strnew(len)
-	if (!str)
-		return (NULL);
-	while (i < len)
-	{
-		*str = s[len + i];
-		str++;
-		i++;
-	}
+	ft_strncpy(str, s + start, len);
 	return (str);
 }

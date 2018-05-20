@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-/*#include "ft_header.h"*/
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
@@ -36,10 +35,4 @@ int	ft_atoi(const char *str)
 		str++;
 	}
 	return (ret * sign);
-}
-
-int	main(void)
-{
-	printf("%d", ft_atoi("8273568"));
-	return (0);
 }

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_header.h"
+#include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
@@ -21,7 +21,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	if (ft_strlen(little) > ft_strlen(big))
 		return (NULL);
 	i = 0;
-	while (*big && ft_strncmp(big, little, len_1))
+	while (*big && ft_strncmp(big, little, len))
 	{
 		if (!(i < len))
 			return (NULL);

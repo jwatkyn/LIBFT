@@ -10,16 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_header.h"
+#include "libft.h"
 
-void	ft_striter(char *s, void (f*)(char *))
+void	ft_striter(char *s, void (*f)(char *))
 {
-	if (s)
+	if (s && f)
 	{
 		while (*s)
 		{
-			*s = f(*s);
-			*s++;
+			(*f)(&*s);
+			s++;
 		}
 	}
 }

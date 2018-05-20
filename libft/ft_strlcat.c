@@ -10,30 +10,30 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_header.h"
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t len;
 
 	len = 0;
-	while (len < size && dest[len])
+	while (len < size && dst[len])
 	{
 		len++;
-		dest++;
+		dst++;
 	}
 	if (len == size)
 	{
-		*dest = '\0';
+		*dst = '\0';
 		return (len);
 	}
-	while (*dest)
-		dest++;
+	while (*dst)
+		dst++;
 	while (*src && len < size)
 	{
-		*dest++ = *src++;
+		*dst++ = *src++;
 		len++;
 	}
-	*dest = '\0';
+	*dst = '\0';
 	return (len);
 }
