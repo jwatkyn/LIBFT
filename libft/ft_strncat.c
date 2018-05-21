@@ -6,7 +6,7 @@
 /*   By: jwatkyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/17 10:51:48 by jwatkyn           #+#    #+#             */
-/*   Updated: 2018/05/17 10:51:50 by jwatkyn          ###   ########.fr       */
+/*   Updated: 2018/05/21 09:02:18 by jwatkyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strncat(char *dest, const char *src, size_t n)
 	len = ft_strlen(dest);
 	len++;
 	counter = 0;
-	while(*src && counter < (n - 1))
+	while (*src && counter < (n - 1))
 	{
 		dest[len] = *src;
 		len++;

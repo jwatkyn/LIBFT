@@ -6,7 +6,7 @@
 /*   By: jwatkyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/18 11:39:12 by jwatkyn           #+#    #+#             */
-/*   Updated: 2018/05/18 14:04:15 by jwatkyn          ###   ########.fr       */
+/*   Updated: 2018/05/21 09:31:26 by jwatkyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,24 +23,15 @@ char	*ft_strtrim(char const *s)
 		return (NULL);
 	min = 0;
 	max = ft_strlen(s) - 1;
-	while (ft_iswhitespace(s[min]) && min < max)
-	{
-		min++;
-	}
-	while (ft_iswhitespace(s[max]) && max > min)
-	{
-		max--;
-	}
+	while (ft_iswhitespace(s[min--]))
+		;
+	while (ft_iswhitespace(s[max--]))
+		;
 	len = max - min;
-	if (max <= min)
-		str = ft_strnew(sizeof(char));
-	else
-		str = ft_strnew(sizeof(char) * (len + 2));
+	str = ft_strnew(sizeof(char) * len);
 	if (str == NULL)
 		return (NULL);
 	if (max > min)
 		str = ft_strncpy(str, s + min, len);
-	else
-		str[0] = '\0';
 	return (str);
 }

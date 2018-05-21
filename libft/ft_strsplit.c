@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jwatkyn <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/05/21 09:03:33 by jwatkyn           #+#    #+#             */
+/*   Updated: 2018/05/21 14:27:33 by jwatkyn          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static int	ft_countwords(const char *s, char c)
@@ -23,8 +35,8 @@ static int	ft_countwords(const char *s, char c)
 
 static char	*ft_makeword(char const *s, char c, int *i)
 {
-	int	j;
-	int	k;
+	int		j;
+	int		k;
 	char	*word;
 
 	j = 0;
@@ -41,34 +53,28 @@ static char	*ft_makeword(char const *s, char c, int *i)
 	return (word);
 }
 
-
-char	**ft_strsplit(char const *s, char c)
+char		**ft_strsplit(char const *s, char c)
 {
-	char **words;
-	int	i;
-	int	j;
+	char	**words;
+	int		i;
+	int		j;
 
 	i = 0;
 	j = 0;
-	if (!(s) || !(words = (char**)malloc(sizeof(char*) * (ft_countwords(s, c) + 1))))
+	if (!(words = (char**)malloc(sizeof(char*) * (ft_countwords(s, c) + 1))))
 		return (NULL);
 	if (s[i])
 	{
-		if (s[i] != c)
+		if (s[i] != c && s[i])
 		{
-			words[j] = ft_makeword(s, c, &i);
-			j++;
+			words[j++] = ft_makeword(s, c, &i);
 		}
-		while (s[i])
+		if (s[i] == c && s[1 + i] != c && s[i + 1] && s[i])
 		{
-			if (s[i] == c && s[1 + i] != c && s[i + 1])
-			{
-				words[j] = ft_makeword(s + i + 1, c, &i);
-				j++;
-			}
-			else
-				i++;
+			words[j++] = ft_makeword(s + i + 1, c, &i);
 		}
+		else
+			i++;
 	}
 	words[j] = 0;
 	return (words);

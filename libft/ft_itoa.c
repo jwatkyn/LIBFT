@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jwatkyn <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/05/21 07:57:02 by jwatkyn           #+#    #+#             */
+/*   Updated: 2018/05/21 09:31:53 by jwatkyn          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static size_t	ft_ilen(int nbr)
 {
-	size_t		len;
+	size_t			len;
 	unsigned int	n;
 
 	if (nbr == 0)
@@ -20,11 +32,11 @@ static size_t	ft_ilen(int nbr)
 	return (len);
 }
 
-char	*ft_itoa(int nbr)
+char			*ft_itoa(int nbr)
 {
-	int		size;
-	int		sign;
-	char		*str;
+	int				size;
+	int				sign;
+	char			*str;
 	unsigned int	n;
 
 	sign = 0;

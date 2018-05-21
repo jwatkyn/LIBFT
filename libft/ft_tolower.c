@@ -6,15 +6,15 @@
 /*   By: jwatkyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/17 10:53:17 by jwatkyn           #+#    #+#             */
-/*   Updated: 2018/05/17 10:53:19 by jwatkyn          ###   ########.fr       */
+/*   Updated: 2018/05/21 07:50:46 by jwatkyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+int	ft_tolower(int c)
 {
-	if (ft_islower(c))
+	if (ft_isupper(c))
 		return (c + 32);
 	return (c);
 }

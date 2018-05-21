@@ -6,7 +6,7 @@
 /*   By: jwatkyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/14 16:06:37 by jwatkyn           #+#    #+#             */
-/*   Updated: 2018/05/17 10:51:05 by jwatkyn          ###   ########.fr       */
+/*   Updated: 2018/05/21 08:44:45 by jwatkyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strdup(char const *s1)
 {
-	char *s2;
-	size_t len;
+	char	*s2;
+	size_t	len;
 
 	len = ft_strlen(s1);
 	s2 = (char*)malloc(sizeof(char) * (1 + len));

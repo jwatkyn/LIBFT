@@ -6,7 +6,7 @@
 /*   By: jwatkyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/17 15:11:28 by jwatkyn           #+#    #+#             */
-/*   Updated: 2018/05/17 17:01:35 by jwatkyn          ###   ########.fr       */
+/*   Updated: 2018/05/21 08:42:33 by jwatkyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t		i;
+	size_t			i;
 	unsigned char	*s;
 	unsigned char	*d;
 

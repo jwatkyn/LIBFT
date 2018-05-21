@@ -6,7 +6,7 @@
 /*   By: jwatkyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/17 10:52:55 by jwatkyn           #+#    #+#             */
-/*   Updated: 2018/05/17 14:41:31 by jwatkyn          ###   ########.fr       */
+/*   Updated: 2018/05/21 09:02:35 by jwatkyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strrchr(const char *str, int c)
 {
-	size_t len;
-	char chr;
+	size_t	len;
+	char	chr;
 
 	chr = c;
 	len = ft_strlen(str);

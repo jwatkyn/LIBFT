@@ -6,7 +6,7 @@
 /*   By: jwatkyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/18 07:44:11 by jwatkyn           #+#    #+#             */
-/*   Updated: 2018/05/18 07:44:13 by jwatkyn          ###   ########.fr       */
+/*   Updated: 2018/05/21 08:08:38 by jwatkyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,5 @@ void	*ft_memalloc(size_t size)
 	if (!ptr)
 		return (NULL);
 	ft_bzero(ptr, size);
-	return(ptr);
+	return (ptr);
 }
