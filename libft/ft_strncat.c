@@ -20,7 +20,7 @@ char	*ft_strncat(char *dest, const char *src, size_t n)
 	len = ft_strlen(dest);
 	len++;
 	counter = 0;
-	while (*src && counter < (n - 1))
+	while (*src && counter < n)
 	{
 		dest[len] = *src;
 		len++;

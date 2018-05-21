@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
+#include <stdio.h>
 static size_t	ft_ilen(int nbr)
 {
 	size_t			len;
@@ -45,14 +45,17 @@ char			*ft_itoa(int nbr)
 		sign = 1;
 		n = nbr * (-1);
 	}
+	else
+		n = nbr;
 	size = ft_ilen(nbr) + sign;
-	str = (char*)malloc(sizeof(char) * (size + 1));
-	if (!str)
+	if (!(str = (char *)malloc(sizeof(char) * size + 1)))
 		return (NULL);
 	if (sign)
 		str[0] = '-';
 	str[--size] = (n % 10) + '0';
 	while (--size >= sign)
+	{
 		str[size] = ((n /= 10) % 10) + '0';
+	}
 	return (str);
 }

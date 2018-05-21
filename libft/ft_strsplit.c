@@ -63,7 +63,7 @@ char		**ft_strsplit(char const *s, char c)
 	j = 0;
 	if (!(words = (char**)malloc(sizeof(char*) * (ft_countwords(s, c) + 1))))
 		return (NULL);
-	if (s[i])
+	while (s[i])
 	{
 		if (s[i] != c && s[i])
 		{

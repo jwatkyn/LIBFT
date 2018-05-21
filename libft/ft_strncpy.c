@@ -17,13 +17,12 @@ char	*ft_strncpy(char *dst, const char *src, size_t len)
 	size_t i;
 
 	i = 0;
-	while (*src && i < len)
+	while (src[i] && i < len)
 	{
-		*dst = *src;
-		dst++;
-		src++;
+		dst[i] = src[i];
 		i++;
 	}
-	*dst = '\0';
+	while (i < len)
+		dst [i++] = '\0';
 	return (dst);
 }

@@ -22,7 +22,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	str1_len = ft_strlen(s1);
 	len = str1_len + ft_strlen(s2);
-	str = ft_strnew(len);
+	if (!(str = ft_strnew(len))
+		return (NULL);
 	ft_strcpy(str, s1);
 	ft_strcpy(str + str1_len, s2);
 	return (str);

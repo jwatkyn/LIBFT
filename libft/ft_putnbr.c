@@ -14,13 +14,17 @@
 
 void	ft_putnbr(int n)
 {
-	if (!n)
-		return ;
-	if (n > 9)
+	char	digit;
+	long	nbr;
+
+	nbr = (long)n;
+	if (nbr < 0)
 	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
+		ft_putchar('-');
+		nbr *= -1;
 	}
-	else
-		ft_putchar(n + '0');
+	if (n > 9)
+		ft_putnbr(n / 10);
+	digit = nbr % 10;
+	ft_putchar(digit + '0');
 }

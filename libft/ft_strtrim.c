@@ -23,15 +23,16 @@ char	*ft_strtrim(char const *s)
 		return (NULL);
 	min = 0;
 	max = ft_strlen(s) - 1;
-	while (ft_iswhitespace(s[min--]))
+	while (ft_iswhitespace(s[min++]))
 		;
 	while (ft_iswhitespace(s[max--]))
 		;
 	len = max - min;
-	str = ft_strnew(sizeof(char) * len);
+	if (!(str = ft_strnew(sizeof(char) * len))
+		return (NULL);
 	if (str == NULL)
 		return (NULL);
 	if (max > min)
-		str = ft_strncpy(str, s + min, len);
+		ft_strncpy(str, s + min, len);
 	return (str);
 }
