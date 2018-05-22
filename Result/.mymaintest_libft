@@ -1,30 +1,30 @@
 [Yellow Tests] are Hardcore
-Test [memset] : Error Line 1853, Funct uf_test_memset FAIL
-Test [bzero] : Error Line 1899, Funct uf_test_bzero FAIL
-Test [memcpy] : Error Line 1807, Funct uf_test_memcpy FAIL
-Test [memccpy] : Error Line 1754, Funct uf_test_memccpy FAIL
-Test [memmove] : Error Line 1616, Funct uf_test_memmove FAIL
+Test [memset] : OK
+Test [bzero] : OK
+Test [memcpy] : OK
+Test [memccpy] : OK
+Test [memmove] : OK
 Test [memchr] : OK
 Test [memcmp] : Error Line 1692, Funct uf_test_memcmp FAIL
 Test [strlen] : OK
 Test [strdup] : OK
-Test [strcpy] : Error Line 1534, Funct uf_test_strcpy FAIL
-Test [strncpy] : Error Line 1499, Funct uf_test_strncpy FAIL
+Test [strcpy] : OK
+Test [strncpy] : OK
 Test [strcat] : OK
 Test [strncat] : Error Line 1433, Funct uf_test_strncat FAIL
-Test [strlcat] : Error Line 1391, Funct uf_test_strlcat FAIL
-Test [strchr] : Error Line 1373, Funct uf_test_strchr FAIL
+Test [strlcat] : OK
+Test [strchr] : OK
 Test [strrchr] : notre=Hello je tesx
 votre=(null)
 Error Line 1338, Funct uf_test_strrchr FAIL
 Test [strstr] : OK
-Test [strnstr] : Error Line 1296, Funct uf_test_strnstr FAIL
+Test [strnstr] : Error Line 1294, Funct uf_test_strnstr FAIL
 Test [strcmp] : OK
 Test [strncmp] : Error Line 1226, Funct uf_test_strncmp FAIL
-Test [atoi] : Error Line 1135, Funct uf_test_atoi FAIL
-Test [isalpha] : Error Line 1121, Funct uf_test_isalpha FAIL
-Test [isdigit] : Error Line 1105, Funct uf_test_isdigit FAIL
-Test [isalnum] : Error Line 1089, Funct uf_test_isalnum FAIL
+Test [atoi] : OK
+Test [isalpha] : OK
+Test [isdigit] : OK
+Test [isalnum] : OK
 Test [isascii] : OK
 Test [isprint] : OK
 Test [toupper] : OK
@@ -38,16 +38,13 @@ Test [striteri] : Segmentation Fault
 Test [strmap] : OK
 Test [strmapi] : OK
 Test [strequ] : OK
-Test [strnequ] : Error Line 809, Funct uf_test_strnequ : 
-ft_strnequ("abc", "abd", 2).
-Expected ret = "1" 			   but have ret = "0"
-FAIL
+Test [strnequ] : OK
 Test [strsub] : OK
 Test [strjoin] : OK
 Test [strsplit] : Segmentation Fault
 Test [itoa] : Error Line 753, Funct uf_test_itoa : 
 ft_itoa(123).
-Expected ret = "123" 			   but have ret = "0003"
+Expected ret = "123" 			   but have ret = "1233"
 FAIL
 Test [strtrim] : Error Line 487, Funct uf_test_strtrim : 
 ft_strstrim("  	    	
@@ -56,7 +53,8 @@ jour
   
      ").
 Expected ret = "Bon	 
-jour" 			   but have ret = ""
+jour" 			   but have ret = "on	 
+jo"
 FAIL
 Test [lstnew] : OK
 Test [lstdelone] : OK

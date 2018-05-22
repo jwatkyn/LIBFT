@@ -28,58 +28,58 @@ Legend: (.) Ok / (F) Fail / (S) Segfault / (B) Bus error / (T) Timeout / (A) Abo
 Notes: Errors should never pass silently! (That's why we don't handle NULL cases.)
 
 [ -------STARTING ALL UNIT TESTS------- ]
->>>> 00_part1_ft_atoi.spec.c ----- [FAIL] ..FF..FFFF...FFFFFFFFFF.....FFFF [FAIL] test_num3 -> ft_atoi("+2798") == atoi("+2798")
->>>> 00_part1_ft_bzero.spec.c ---- [FAIL] FF. [FAIL] simple_string -> memcmp(control, subject, 10) == 0
->>>> 00_part1_ft_isalnum.spec.c -- [FAIL] F.FFFFF.FFFF..F..FF [FAIL] test_num1 -> (ft_isalnum('a') != 0) == (isalnum('a') != 0)
->>>> 00_part1_ft_isalpha.spec.c -- [FAIL] F..FF.....FF....... [FAIL] test_num1 -> (ft_isalpha('a') != 0) == (isalpha('a') != 0)
+>>>> 00_part1_ft_atoi.spec.c ----- [Ok !] ................................
+>>>> 00_part1_ft_bzero.spec.c ---- [Ok !] ...
+>>>> 00_part1_ft_isalnum.spec.c -- [Ok !] ...................
+>>>> 00_part1_ft_isalpha.spec.c -- [Ok !] ...................
 >>>> 00_part1_ft_isascii.spec.c -- [Ok !] ....................
->>>> 00_part1_ft_isdigit.spec.c -- [FAIL] ..F..FF.FF....F..FF [FAIL] test_num3 -> (ft_isdigit('2') != 0) == (isdigit('2') != 0)
+>>>> 00_part1_ft_isdigit.spec.c -- [Ok !] ...................
 >>>> 00_part1_ft_isprint.spec.c -- [Ok !] ...................
->>>> 00_part1_ft_memccpy.spec.c -- [FAIL] FF [FAIL] unittest -> p1 == p2
+>>>> 00_part1_ft_memccpy.spec.c -- [Ok !] ..
 >>>> 00_part1_ft_memchr.spec.c --- [Ok !] .
 >>>> 00_part1_ft_memcmp.spec.c --- [FAIL] ...F.F [FAIL] unittest4 -> ft_memcmp("aab", "aac", 2) == 0
 >>>> 00_part1_ft_memcpy.spec.c --- [Ok !] .
->>>> 00_part1_ft_memmove.spec.c -- [FAIL] FF [FAIL] unittest1 -> strcmp(testA1, "aabcde") == 0
->>>> 00_part1_ft_memset.spec.c --- [FAIL] FF. [FAIL] unittest1 -> memcmp(b1, b2, 100) == 0
+>>>> 00_part1_ft_memmove.spec.c -- [Ok !] ..
+>>>> 00_part1_ft_memset.spec.c --- [Ok !] ...
 >>>> 00_part1_ft_strcat.spec.c --- [Ok !] .
->>>> 00_part1_ft_strchr.spec.c --- [FAIL] .F.. [FAIL] unittest2 -> strchr(buf, 0) == ft_strchr(buf, 0)
->>>> 00_part1_ft_strcmp.spec.c --- [FAIL] ...F. [FAIL] unittest4 -> ft_strcmp("\200", "\0") > 0
->>>> 00_part1_ft_strcpy.spec.c --- [FAIL] FF [FAIL] unittest1 -> strcmp(ft_strcpy(buf1, "abcde"), __builtin___strcpy_chk (buf1, "abcde", __builti...
+>>>> 00_part1_ft_strchr.spec.c --- [Ok !] ....
+>>>> 00_part1_ft_strcmp.spec.c --- [Ok !] .....
+>>>> 00_part1_ft_strcpy.spec.c --- [Ok !] ..
 >>>> 00_part1_ft_strdup.spec.c --- [Ok !] ...
->>>> 00_part1_ft_strlcat.spec.c -- [FAIL] FFFFFFF [FAIL] unittest1 -> strcmp(buf, "abcabcdef") == 0
+>>>> 00_part1_ft_strlcat.spec.c -- [Ok !] .......
 >>>> 00_part1_ft_strlen.spec.c --- [Ok !] ....
 >>>> 00_part1_ft_strncat.spec.c -- [FAIL] FF [FAIL] unittest1 -> strcmp(buf, "To be or not") == 0
->>>> 00_part1_ft_strncmp.spec.c -- [FAIL] F..FF [FAIL] unittest1 -> ft_strncmp("\200", "\0", 1) > 0
->>>> 00_part1_ft_strncpy.spec.c -- [FAIL] F. [FAIL] unittest1 -> memcmp(buf, "abcdefghi", 6) == 0
->>>> 00_part1_ft_strnstr.spec.c -- [FAIL] FF.. [FAIL] unittest1 -> ft_strnstr(buf, "deux", 5) == ((void*)0)
+>>>> 00_part1_ft_strncmp.spec.c -- [FAIL] ....F [FAIL] unittest5 -> ft_strncmp("q", "a", 0) == strncmp("q", "a", 0)
+>>>> 00_part1_ft_strncpy.spec.c -- [Ok !] ..
+>>>> 00_part1_ft_strnstr.spec.c -- [FAIL] SS.S [SEGV] unittest1 -> strcmp(ft_strnstr(buf, "deux", 10), "deux 9") == 0
 >>>> 00_part1_ft_strrchr.spec.c -- [FAIL] ...F [FAIL] unittest4 -> ft_strrchr(buf2, 'a') == buf2
 >>>> 00_part1_ft_strstr.spec.c --- [Ok !] ..........
 >>>> 00_part1_ft_tolower.spec.c -- [Ok !] ...................
 >>>> 00_part1_ft_toupper.spec.c -- [Ok !] ...................
->>>> 01_part2_ft_itoa.spec.c ----- [FAIL] F.F. [FAIL] test_num1 -> strcmp(ft_itoa(0), "0") == 0
+>>>> 01_part2_ft_itoa.spec.c ----- [Ok !] ....
 >>>> 01_part2_ft_memalloc.spec.c - [Ok !] ..
 >>>> 01_part2_ft_memdel.spec.c --- [Ok !] .
 >>>> 01_part2_ft_putchar.spec.c -- [Ok !] .
 >>>> 01_part2_ft_putchar_fd.spec.c [Ok !] .
 >>>> 01_part2_ft_putendl.spec.c -- [Ok !] .
->>>> 01_part2_ft_putendl_fd.spec.c [FAIL] F [FAIL] simple_test -> strcmp(buf, "A QUE KOUKOU\n") == 0
+>>>> 01_part2_ft_putendl_fd.spec.c [Ok !] .
 >>>> 01_part2_ft_putnbr.spec.c --- [FAIL] F [FAIL] simple_test -> strcmp(buf, "01-11230010203-562147483647-2147483648") == 0
->>>> 01_part2_ft_putnbr_fd.spec.c  [FAIL] F [FAIL] simple_test -> strcmp(buf, "01-156-1230102032147483647-2147483648") == 0
+>>>> 01_part2_ft_putnbr_fd.spec.c  [Ok !] .
 >>>> 01_part2_ft_putstr.spec.c --- [Ok !] .
 >>>> 01_part2_ft_putstr_fd.spec.c  [Ok !] .
 >>>> 01_part2_ft_strclr.spec.c --- [Ok !] .
 >>>> 01_part2_ft_strdel.spec.c --- [Ok !] .
 >>>> 01_part2_ft_strequ.spec.c --- [Ok !] ...
 >>>> 01_part2_ft_striter.spec.c -- [Ok !] .
->>>> 01_part2_ft_striteri.spec.c - [FAIL] S [SEGV] simple_test -> (null)
+>>>> 01_part2_ft_striteri.spec.c - [Ok !] .
 >>>> 01_part2_ft_strjoin.spec.c -- [Ok !] ..
 >>>> 01_part2_ft_strmap.spec.c --- [Ok !] .
 >>>> 01_part2_ft_strmapi.spec.c -- [Ok !] .
->>>> 01_part2_ft_strnequ.spec.c -- [FAIL] .F.. [FAIL] test2 -> ft_strnequ("abcde", "abdfe", 2) == 1
+>>>> 01_part2_ft_strnequ.spec.c -- [FAIL] F... [FAIL] test1 -> ft_strnequ("ededeqdf", "", 0) == 1
 >>>> 01_part2_ft_strnew.spec.c --- [Ok !] ...
->>>> 01_part2_ft_strsplit.spec.c - [FAIL] S...S. [SEGV] test1 -> strcmp(tt[0], "salut") == 0
+>>>> 01_part2_ft_strsplit.spec.c - [FAIL] F.F.F. [FAIL] test1 -> strcmp(tt[0], "salut") == 0
 >>>> 01_part2_ft_strsub.spec.c --- [Ok !] ...
->>>> 01_part2_ft_strtrim.spec.c -- [FAIL] F.SF [FAIL] test1 -> strcmp(ft_strtrim("\t\n  \tAAA \t BBB\t\n  \t"), "AAA \t BBB") == 0
+>>>> 01_part2_ft_strtrim.spec.c -- [FAIL] FSSF [FAIL] test1 -> strcmp(ft_strtrim("\t\n  \tAAA \t BBB\t\n  \t"), "AAA \t BBB") == 0
 >>>> 02_bonus_ft_lstadd.spec.c --- [Ok !] .
 >>>> 02_bonus_ft_lstdel.spec.c --- [Ok !] .
 >>>> 02_bonus_ft_lstdelone.spec.c  [Ok !] .
@@ -88,4 +88,4 @@ Notes: Errors should never pass silently! (That's why we don't handle NULL cases
 >>>> 02_bonus_ft_lstnew.spec.c --- [Ok !] .
 [ ----------END OF UNIT TESTS---------- ]
 
->>>> Result: 32/58 test suites passed. 201/289 tests passed (dots).
+>>>> Result: 49/58 test suites passed. 271/289 tests passed (dots).

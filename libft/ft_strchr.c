@@ -6,7 +6,7 @@
 /*   By: jwatkyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/17 10:50:14 by jwatkyn           #+#    #+#             */
-/*   Updated: 2018/05/17 10:50:17 by jwatkyn          ###   ########.fr       */
+/*   Updated: 2018/05/22 07:44:32 by jwatkyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,5 @@ char	*ft_strchr(const char *str, int c)
 			return (NULL);
 		str++;
 	}
-	return ((char *)s);
+	return ((char *)str);
 }

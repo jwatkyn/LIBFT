@@ -76,32 +76,11 @@ RUNING TESTS:
                       First part
 .-"-.     .-"-.     .-"-.     .-"-.     .-"-.     .-"-.
      "-.-"     "-.-"     "-.-"     "-.-"     "-.-"    
-ft_memset:     [FAILED] [OK] [FAILED] [OK] [OK] [FAILED] [OK] 
-[fail]: basic memset test (fill a buffer with 'A')
-[fail]: your memset does not cast the memory into unsigned chars
-[fail]: basic memset test (fill a buffer with 'A')
-
-ft_bzero:      [FAILED] [OK] [NO CRASH] [OK] 
-[fail]: bzero with normal params fail !
-[no crash]: your bzero does not segfault when null params is sent
-
-ft_memcpy:     [OK] [FAILED] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
-[fail]: your memcpy's return is false/doesn't work with basic params
-
-ft_memccpy:    [OK] [FAILED] [FAILED] [FAILED] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
-[fail]: your memccpy doesn't cast the memory into unsigned char
-[fail]: your memccpy doesn't cast the stop-character into unsigned char
-[fail]: your memccpy's return is false/doesn't work with basic params
-
-ft_memmove:    [FAILED] [OK] [FAILED] [FAILED] [FAILED] [FAILED] [OK] [OK] [OK] [NO CRASH] [NO CRASH] [OK] 
-[fail]: your memmove does not work with basic input
-[fail]: your memmove does not work with \0 and others unsigned char codes
-[fail]: your memmove does not work with integers copy
-[fail]: your memmove does not support the overlap (test 1)
-[fail]: your memmove does not support the overlap (test 2)
-[no crash]: your memmove does not segfault when null params is sent
-[no crash]: your memmove does not segfault when null params is sent
-
+ft_memset:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_bzero:      [OK] [OK] [OK] [OK] 
+ft_memcpy:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_memccpy:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_memmove:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_memchr:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_memcmp:     [OK] [OK] [FAILED] [FAILED] [FAILED] [FAILED] [FAILED] [OK] [NO CRASH] [NO CRASH] 
 [fail]: your memcmp does not work with basic input
@@ -114,22 +93,9 @@ ft_memcmp:     [OK] [OK] [FAILED] [FAILED] [FAILED] [FAILED] [FAILED] [OK] [NO C
 
 ft_strlen:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_strdup:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
-ft_strcpy:     [OK] [FAILED] [OK] [OK] [OK] [OK] [OK] [OK] [NO CRASH] 
-[fail]: your strcpy return value is false / your strcpy does not work
-[no crash]: your strcpy does not segfault when null parameter is sent
-
-ft_strncpy:    [FAILED] [FAILED] [FAILED] [FAILED] [OK] [FAILED] [FAILED] [FAILED] [OK] [OK] [OK] 
-[fail]: your strncpy does not work with basic input
-[fail]: your strncpy return value is false / your strncpy does not works
-[fail]: your strncpy does not support unicode ?
-[fail]: your strncpy does not work with an empty string
-[fail]: your strncpy does not fill with \0 the rest of the dest buffer
-[fail]: your strncpy put the bad number of \0 at the end of the string
-[fail]: your strncpy set a \0 at the end of the string if strlen(src) > n
-
-ft_strcat:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [NO CRASH] 
-[no crash]: your strcat does not segfault when null parameter is sent
-
+ft_strcpy:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strncpy:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strcat:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_strncat:    [FAILED] [OK] [FAILED] [FAILED] [FAILED] [OK] [FAILED] [FAILED] [CRASH] [OK] [OK] 
 [fail]: your strncat does not work with basic input
 [fail]: your strncat does not work with basic input
@@ -139,53 +105,24 @@ ft_strncat:    [FAILED] [OK] [FAILED] [FAILED] [FAILED] [OK] [FAILED] [FAILED] [
 [fail]: your strncat does not set a \0 to the end
 [crash]: your strncat crash cause it read too many bytes or attempt to write on buff !
 
-ft_strlcat:    [FAILED] [FAILED] [FAILED] [OK] [FAILED] [OK] [OK] [OK] [OK] [FAILED] [OK] [NO CRASH] 
-[fail]: your strlcat does not work with basic input
-[fail]: your strlcat does not work with basic input
-[fail]: your strlcat does not work with basic input
-[fail]: your strlcat does not work with a size of 0
-[fail]: your strlcat return value is false
-[no crash]: your strlcat does not segfault when null parameter is sent
-
-ft_strchr:     [OK] [OK] [OK] [OK] [OK] [OK] [FAILED] [OK] [OK] [OK] 
-[fail]: your strchr does not work with \0
-
+ft_strlcat:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strchr:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_strrchr:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_strstr:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
-ft_strnstr:    [OK] [OK] [FAILED] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strnstr:    [FAILED] [OK] [FAILED] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+[fail]: your strnstr does not work with basic input
 [fail]: your strnstr does not work with basic input
 
-ft_strcmp:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [FAILED] [FAILED] [OK] [OK] [OK] 
-[fail]: your strcmp does not cast in unsigned the diff
-[fail]: your strcmp does not work with non ascii chars
-
-ft_strncmp:    [OK] [OK] [OK] [OK] [FAILED] [FAILED] [FAILED] [OK] [OK] [FAILED] [OK] [OK] [OK] 
-[fail]: your strncmp does not work with zero length string
-[fail]: your strncmp does not work with zero length string
-[fail]: your strncmp does not cast in unsigned char the diff
-[fail]: your strncmp does not work with non ascii chars
-
-ft_atoi:       [FAILED] [FAILED] [FAILED] [FAILED] [OK] [OK] [FAILED] [FAILED] [FAILED] [KO] [OK] [KO] [OK] [NO CRASH] 
-[fail]: your atoi does not work with positive numbers
-[fail]: your atoi does not work with negative numbers
-[fail]: your atoi does not work with random numbers
-[fail]: your atoi is not working with blanks
-[fail]: your atoi is not working with blanks
-[fail]: your atoi does not work with int max value
-[fail]: your atoi does not work with int min value
-[KO]: your atoi does not work with long max value
+ft_strcmp:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strncmp:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_atoi:       [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [KO] [KO] [NO CRASH] 
 [KO]: your atoi does not work with over long max value
+[KO]: your atoi does not work with over long min value
 [no crash]: your atoi does not work with over long min value
 
-ft_isalpha:    [FAILED] 
-[fail]: your isalpha just doesn't work, REALLY ?!
-
-ft_isdigit:    [FAILED] 
-[fail]: your isdigit just doesn't work, REALLY ?!
-
-ft_isalnum:    [FAILED] 
-[fail]: your isalnum just doesn't work, REALLY ?!
-
+ft_isalpha:    [OK] 
+ft_isdigit:    [OK] 
+ft_isalnum:    [OK] 
 ft_isascii:    [OK] 
 ft_isprint:    [OK] 
 ft_toupper:    [OK] 
@@ -199,50 +136,46 @@ a color code will tell you if your function is protected/not BUT stay coherent !
  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)
 (______)(______)(______)(______)(______)(______)(______)(___
 
-ft_memalloc:   [OK] [FAILED] [OK] [OK] [OK] 
-[fail]: your memalloc does not set allocated mem to 0
-
+ft_memalloc:   [OK] [OK] [OK] [OK] [OK] 
 ft_memdel:     [OK] [OK] [ðM-^_M-^[¡ ] 
-ft_strnew:     [OK] [FAILED] [FAILED] [OK] 
+ft_strnew:     [OK] [FAILED] [OK] [OK] 
 [fail]: your strnew does not set allocated mem to 0
-[fail]: your strnew did not allocate the good size so the \0 test can be false
 
 ft_strdel:     [OK] [OK] [ðM-^_M-^[¡ ] 
 ft_strclr:     [OK] [ðM-^_M-^[¡ ] 
 ft_striter:    [OK] [OK] [ðM-^_M-^[¡ ] 
-ft_striteri:   [CRASH] [CRASH] [ðM-^_M-^R¥ ] 
-[crash]: your striteri does no work
-[crash]: your striteri crash cause it read too many bytes !
+ft_striteri:   [OK] [OK] [ðM-^_M-^[¡ ] 
+ft_strmap:     [OK] [FAILED] [FAILED] [OK] [OK] [ðM-^_M-^[¡ ] 
+[fail]: your strmap did not set \0 at the end of the string
+[fail]: your strmap does not malloc ?
 
-ft_strmap:     [OK] [OK] [OK] [FAILED] [OK] [ðM-^_M-^[¡ ] 
-[fail]: your strmap did not allocate the good size so the \0 test may be false
-
-ft_strmapi:    [OK] [OK] [OK] [FAILED] [OK] [ðM-^_M-^[¡ ] 
-[fail]: your strmapi does not allocate the good size so the \0 test may be false
+ft_strmapi:    [FAILED] [OK] [FAILED] [OK] [OK] [ðM-^_M-^[¡ ] 
+[fail]: your strmapi does not work
+[fail]: your strmapi did not set \0 at the end of the string
 
 ft_strequ:     [OK] [OK] [OK] [OK] [ðM-^_M-^[¡ ] 
 ft_strnequ:    [OK] [OK] [OK] [OK] [ðM-^_M-^[¡ ] 
-ft_strsub:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [ðM-^_M-^[¡ ] 
-ft_strjoin:    [OK] [OK] [OK] [CRASH] [OK] [ðM-^_M-^[¡ ] 
-[crash]: you did not protect your malloc return
+ft_strsub:     [OK] [OK] [OK] [FAILED] [FAILED] [OK] [OK] [OK] [ðM-^_M-^[¡ ] 
+[fail]: your strsub did not allocate the good size so the \0 test may be false
+[fail]: your strsub does not set \0 to the end of the string
 
-ft_strtrim:    [FAILED] [FAILED] [FAILED] [OK] [CRASH] [KO] [FAILED] [OK] [FAILED] [ðM-^_M-^[¡ ] 
+ft_strjoin:    [OK] [OK] [OK] [OK] [OK] [ðM-^_M-^[¡ ] 
+ft_strtrim:    [FAILED] [FAILED] [FAILED] [CRASH] [CRASH] [KO] [FAILED] [OK] [FAILED] [ðM-^_M-^[¡ ] 
 [fail]: your strtrim does not work with basic input
 [fail]: your strtrim does not work with basic input
 [fail]: your strtrim does not work with basic input
+[crash]: your strtrim does not work with full blank input
 [crash]: your strtrim does not work with empty input
 [KO]: your strtrim did not allocate the good size so the \0 test may be false
 [fail]: your strtrim does not allocate memory
 [fail]: your strtrim does not set \0 to the end of the string
 
-ft_strsplit:   [FAILED] [OK] [FAILED] [OK] [OK] [OK] [OK] [OK] [OK] [ðM-^_M-^R¥ ] 
+ft_strsplit:   [FAILED] [OK] [OK] [OK] [OK] [OK] [FAILED] [OK] [FAILED] [ðM-^_M-^R¥ ] 
 [fail]: your strsplit does not work with basic input
-[fail]: your strsplit does not work with one word
+[fail]: your strsplit does not work with basic input
+[fail]: your strsplit does not work with basic input
 
-ft_itoa:       [FAILED] [FAILED] [FAILED] [OK] [FAILED] [OK] [OK] [OK] [OK] 
-[fail]: your itoa does not work with basic input
-[fail]: your itoa does not work with random number
-[fail]: your itoa does not work with max int
+ft_itoa:       [OK] [OK] [OK] [OK] [FAILED] [OK] [OK] [OK] [OK] 
 [fail]: your itoa don't set \0 at the end of the string
 
 ft_putchar:    [OK] [OK] [KO] 
@@ -250,22 +183,16 @@ ft_putchar:    [OK] [OK] [KO]
 
 ft_putstr:     [OK] [OK] [ðM-^_M-^R¥ ] 
 ft_putendl:    [OK] [OK] [ðM-^_M-^R¥ ] 
-ft_putnbr:     [OK] [OK] [FAILED] [FAILED] [FAILED] 
+ft_putnbr:     [OK] [OK] [FAILED] [OK] [FAILED] 
 [fail]: your putnbr does not work with int min
-[fail]: your putnbr does not work with random numbers
 [fail]: your putnbr allocate memory, wtf ???
 
 ft_putchar_fd: [OK] [OK] [KO] 
 [KO]: your putchar_fd does not work with unicode
 
 ft_putstr_fd:  [OK] [OK] [ðM-^_M-^R¥ ] 
-ft_putendl_fd: [FAILED] [FAILED] [ðM-^_M-^R¥ ] 
-[fail]: your putendl_fd does not work with basic input
-[fail]: your putendl_fd does not work with non ascii chars
-
-ft_putnbr_fd:  [OK] [FAILED] [OK] [FAILED] [FAILED] 
-[fail]: your putnbr_fd does not work with int max
-[fail]: your putnbr_fd does not work with random numbers
+ft_putendl_fd: [OK] [OK] [ðM-^_M-^R¥ ] 
+ft_putnbr_fd:  [OK] [OK] [OK] [OK] [FAILED] 
 [fail]: your putnbr_fd allocate memory, wtf ???
 
 

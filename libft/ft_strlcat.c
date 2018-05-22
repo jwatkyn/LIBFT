@@ -6,13 +6,13 @@
 /*   By: jwatkyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/17 10:51:15 by jwatkyn           #+#    #+#             */
-/*   Updated: 2018/05/18 08:39:43 by jwatkyn          ###   ########.fr       */
+/*   Updated: 2018/05/22 07:49:37 by jwatkyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_strnlen(const char *s, sixe_t max_len)
+static size_t	ft_strnlen(const char *s, size_t max_len)
 {
 	size_t len;
 
@@ -22,7 +22,7 @@ static size_t	ft_strnlen(const char *s, sixe_t max_len)
 	return (len);
 }
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+size_t			ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t len;
 	size_t i;

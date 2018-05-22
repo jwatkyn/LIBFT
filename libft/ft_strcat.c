@@ -6,7 +6,7 @@
 /*   By: jwatkyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/17 10:49:52 by jwatkyn           #+#    #+#             */
-/*   Updated: 2018/05/21 07:51:24 by jwatkyn          ###   ########.fr       */
+/*   Updated: 2018/05/22 07:44:01 by jwatkyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ char	*ft_strcat(char *dest, const char *src)
 	i = ft_strlen(dest);
 	while (*src)
 	{
-		dest[length++] = *src++;
+		dest[i++] = *src++;
 	}
-	dest[length] = *src;
+	dest[i] = *src;
 	return (dest);
 }

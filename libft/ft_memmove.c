@@ -6,7 +6,7 @@
 /*   By: jwatkyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/17 15:11:28 by jwatkyn           #+#    #+#             */
-/*   Updated: 2018/05/21 08:42:33 by jwatkyn          ###   ########.fr       */
+/*   Updated: 2018/05/22 08:25:07 by jwatkyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,22 +17,20 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	size_t			i;
 	unsigned char	*s;
 	unsigned char	*d;
-	unsigned char	*s1;
 
 	s = (unsigned char *)src;
 	d = (unsigned char *)dst;
-	s1 = (unsigned char *)malloc(sizeof(unsigned char) * n);
 	i = 0;
-	while (i < n)
+	if (src > dst)
+		ft_memcpy(dst, src, n);
+	else
 	{
-		s1[i] = s[i];
-		i++;
-	}
-	i = 0;
-	while (i < n)
-	{
-		d[i] = s1[i];
-		i++;
+		i = n;
+		while (i)
+		{
+			d[i - 1] = s[i - 1];
+			i--;
+		}
 	}
 	return (dst);
 }

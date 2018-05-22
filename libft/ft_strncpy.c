@@ -6,7 +6,7 @@
 /*   By: jwatkyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/14 16:02:28 by jwatkyn           #+#    #+#             */
-/*   Updated: 2018/05/17 10:52:26 by jwatkyn          ###   ########.fr       */
+/*   Updated: 2018/05/22 07:41:10 by jwatkyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ char	*ft_strncpy(char *dst, const char *src, size_t len)
 		i++;
 	}
 	while (i < len)
-		dst [i++] = '\0';
+		dst[i++] = '\0';
 	return (dst);
 }

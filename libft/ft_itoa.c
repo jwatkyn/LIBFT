@@ -6,12 +6,12 @@
 /*   By: jwatkyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 07:57:02 by jwatkyn           #+#    #+#             */
-/*   Updated: 2018/05/21 09:31:53 by jwatkyn          ###   ########.fr       */
+/*   Updated: 2018/05/22 07:40:21 by jwatkyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+
 static size_t	ft_ilen(int nbr)
 {
 	size_t			len;
