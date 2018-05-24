@@ -6,7 +6,7 @@
 /*   By: jwatkyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 07:57:02 by jwatkyn           #+#    #+#             */
-/*   Updated: 2018/05/22 07:40:21 by jwatkyn          ###   ########.fr       */
+/*   Updated: 2018/05/23 16:17:24 by jwatkyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ char			*ft_itoa(int nbr)
 	else
 		n = nbr;
 	size = ft_ilen(nbr) + sign;
-	if (!(str = (char *)malloc(sizeof(char) * size + 1)))
+	if (!(str = ft_strnew(size)))
 		return (NULL);
 	if (sign)
 		str[0] = '-';

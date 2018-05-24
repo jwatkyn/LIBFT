@@ -6,7 +6,7 @@
 /*   By: jwatkyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 09:09:40 by jwatkyn           #+#    #+#             */
-/*   Updated: 2018/05/21 14:39:53 by jwatkyn          ###   ########.fr       */
+/*   Updated: 2018/05/24 14:59:30 by jwatkyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,15 @@
 # include <unistd.h>
 # include <string.h>
 # include <stdlib.h>
+# include <limits.h>
+
+# ifndef LONG_MAX
+#  define LONG_MAX ((long)(ULONG_MAX >> 1))
+# endif
+
+# ifndef LONG_MIN
+#  define LONG_MIN ((long)(~LONG_MAX))
+# endif
 
 typedef struct		s_list
 {

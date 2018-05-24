@@ -6,76 +6,83 @@
 /*   By: jwatkyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 09:03:33 by jwatkyn           #+#    #+#             */
-/*   Updated: 2018/05/21 14:27:33 by jwatkyn          ###   ########.fr       */
+/*   Updated: 2018/05/24 16:19:02 by jwatkyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_countwords(const char *s, char c)
+static int	ft_wordlen(const char *s, char c)
 {
-	int i;
 	int count;
 
-	i = 0;
 	count = 0;
-	if (s[i])
+	if (*s)
 	{
-		if (s[i] != c)
-			count++;
-		while (s[i])
+		while (*s != c && *s)
 		{
-			if (s[i] == c && s[i + 1] != c && s[i + 1])
-				count++;
-			i++;
+			count++;
+			s++;
 		}
 	}
 	return (count);
 }
 
-static char	*ft_makeword(char const *s, char c, int *i)
+static int	ft_countwords(char const *s, char c)
 {
-	int		j;
-	int		k;
-	char	*word;
+	int		count;
 
-	j = 0;
-	k = 0;
-	while (s[j] && s[j] != c)
-		++j;
-	*i = *i + j;
-	word = ft_strnew(sizeof(char) * (j + 1));
-	while (k < j)
+	count = 0;
+	while (*s)
 	{
-		word[k] = s[k];
-		++k;
+		while (*s == c)
+			s++;
+		if (!*s)
+			return (count);
+		while (*s != c && *s)
+			s++;
+		count++;
 	}
-	return (word);
+	return (count);
+}
+
+static int	ft_word(char **words, char *s, int i, int c)
+{
+	char	*nword;
+	int		len;
+
+	len = ft_wordlen(s, c);
+	if (!(nword = ft_strnew(len)))
+		return (-1);
+	ft_strncpy(nword, s, len);
+	words[i] = nword;
+	return (1);
 }
 
 char		**ft_strsplit(char const *s, char c)
 {
 	char	**words;
+	int		flag;
 	int		i;
-	int		j;
 
+	flag = 0;
 	i = 0;
-	j = 0;
-	if (!(words = (char**)malloc(sizeof(char*) * (ft_countwords(s, c) + 1))))
+	if (!(words = (char **)malloc(sizeof(char *) * ft_countwords(s, c))))
 		return (NULL);
-	while (s[i])
+	while (s && *s)
 	{
-		if (s[i] != c && s[i])
+		if (*s != c && flag == 0)
 		{
-			words[j++] = ft_makeword(s, c, &i);
-		}
-		if (s[i] == c && s[1 + i] != c && s[i + 1] && s[i])
-		{
-			words[j++] = ft_makeword(s + i + 1, c, &i);
-		}
-		else
+			flag = ft_word(words, (char *)s, i, c);
 			i++;
+			if (flag == -1)
+				return (NULL);
+		}
+		if (flag == 1)
+			if (*s == c)
+				flag = 0;
+		s++;
 	}
-	words[j] = 0;
+	words[i] = 0;
 	return (words);
 }
