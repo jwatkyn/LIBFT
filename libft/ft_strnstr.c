@@ -6,12 +6,11 @@
 /*   By: jwatkyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/17 10:52:39 by jwatkyn           #+#    #+#             */
-/*   Updated: 2018/05/24 17:11:37 by jwatkyn          ###   ########.fr       */
+/*   Updated: 2018/05/24 22:20:02 by jwatkyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
@@ -22,9 +21,9 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		return ((char*)(big));
 	if (!*big)
 		return (NULL);
-	if ((len_n = ft_strlen(little)) > ft_strlen(big))
+	if (!len || (len_n = ft_strlen(little)) > ft_strlen(big) || len_n > len)
 		return (NULL);
-	i = 0;
+	i = 1;
 	while (*big && ft_strncmp(big, little, len_n))
 	{
 		if (i++ > len - len_n)
@@ -34,10 +33,4 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		big++;
 	}
 	return ((char*)(big));
-}
-
-int	main(void)
-{
-	printf("%s", ft_strnstr("un deux 9", "9", 8));
-	return (0);
 }

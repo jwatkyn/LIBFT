@@ -6,7 +6,7 @@
 /*   By: jwatkyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 09:09:40 by jwatkyn           #+#    #+#             */
-/*   Updated: 2018/05/24 14:59:30 by jwatkyn          ###   ########.fr       */
+/*   Updated: 2018/05/24 22:58:40 by jwatkyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ int					ft_isascii(int c);
 int					ft_isalnum(int c);
 int					ft_isdigit(int c);
 int					ft_isalpha(int c);
+int					ft_isupper(int c);
+int					ft_islower(int c);
 char				*ft_strdup(const char *s1);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
@@ -75,6 +77,7 @@ int					ft_iswhitespace(char c);
 void				ft_putstr(char const *s);
 void				ft_putchar(char c);
 void				ft_putnbr(int n);
+void				ft_putnbr_fd(int n, int fd);
 void				ft_putendl(char const *s);
 void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char const *s, int fd);
@@ -95,8 +98,5 @@ char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s);
 char				**ft_strsplit(char const *s, char c);
 char				*ft_itoa(int n);
-void				ft_delete(void *mem, size_t size);
-int					ft_islower(int c);
-int					ft_isupper(int c);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: jwatkyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/17 10:52:55 by jwatkyn           #+#    #+#             */
-/*   Updated: 2018/05/21 09:02:35 by jwatkyn          ###   ########.fr       */
+/*   Updated: 2018/05/24 21:10:48 by jwatkyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 char	*ft_strrchr(const char *str, int c)
 {
-	size_t	len;
+	int		len;
 	char	chr;
 
 	chr = c;
-	len = ft_strlen(str);
-	while (len > 0)
+	len = (int)(ft_strlen(str));
+	while (len >= 0)
 	{
 		if (str[len] == chr)
 			return ((char*)(str + len));

@@ -6,7 +6,7 @@
 /*   By: jwatkyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/18 07:49:16 by jwatkyn           #+#    #+#             */
-/*   Updated: 2018/05/24 11:44:33 by jwatkyn          ###   ########.fr       */
+/*   Updated: 2018/05/24 22:34:42 by jwatkyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,9 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
 	char *str;
 
-	str = ft_strnew(len);
-	if (start > ft_strlen(s))
+	if (!(str = ft_strnew(len)))
 		return (NULL);
-	if (str == NULL || s == NULL)
+	if (!str || !s)
 		return (NULL);
 	ft_strncpy(str, s + start, len);
 	return (str);
