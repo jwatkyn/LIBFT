@@ -64,17 +64,18 @@ SRCS = ft_atoi.c \
 	ft_strsub.c \
 	ft_strtrim.c \
 	ft_tolower.c \
-	ft_toupper.c \ 
-	ft_strmerge.c
+	ft_toupper.c \
+	ft_strmerge.c \
+	get_next_line.c
 
-OBJS = *.o
+OBJS = ${SRCS:.c=.o}
 
 FLAGS = -Wall -Wextra -Werror
-HEADERS = -I.
+HEADERS = -I includes
 
 all: $(NAME)
 
-$(NAME):
+$(NAME): 
 	gcc -c $(FLAGS) $(SRCS) $(HEADERS)
 	ar rc $(NAME) $(OBJS)
 	ranlib $(NAME)
