@@ -6,7 +6,7 @@
 /*   By: jwatkyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 09:09:40 by jwatkyn           #+#    #+#             */
-/*   Updated: 2018/05/29 11:41:41 by jwatkyn          ###   ########.fr       */
+/*   Updated: 2018/06/29 11:10:07 by jwatkyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,7 @@
 #  define LONG_MIN ((long)(~LONG_MAX))
 # endif
 
-
 # define BUFF_SIZE 30
-
 
 typedef struct		s_list
 {
@@ -103,6 +101,6 @@ char				*ft_strtrim(char const *s);
 char				**ft_strsplit(char const *s, char c);
 char				*ft_itoa(int n);
 char				*ft_strmerge(char *a, char *b);
-int 				get_next_line(int fd, char **line);
+int					get_next_line(int fd, char **line);
 
 #endif
